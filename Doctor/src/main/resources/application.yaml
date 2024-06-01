@@ -1,0 +1,58 @@
+server:
+  port: 5051
+  servlet:
+    context-path: /doctor
+
+
+spring:
+  application:
+    name: DOCTOR-SERVICE
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888
+
+  datasource:
+    url: jdbc:h2:file:./Doctor/database/doctor_db
+    driverClassName: org.h2.Driver
+    username: root
+    password:
+
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate :
+      ddl-auto : update
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka
+management:
+  health:
+    show-details: always
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+  ### Spring boot admin
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  ### Spring boot admin
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      getPatientInstance:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 3s
+        permittedNumberOfCallsInHalfOpenState: 2
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
