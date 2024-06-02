@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Eureka" />
       </profile>
-      <profile name="Annotation profile for Payment" enabled="true">
+      <profile name="Annotation profile for patient" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -19,8 +19,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="Payment" />
         <module name="patient" />
+        <module name="Payment" />
         <module name="Doctor" />
       </profile>
     </annotationProcessing>
