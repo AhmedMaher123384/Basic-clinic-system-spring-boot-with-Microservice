@@ -32,7 +32,6 @@ spring:
         web-allow-others: true
 
 
-
 eureka:
   client:
     serviceUrl:
@@ -47,9 +46,7 @@ management:
   endpoint:
     health:
       show-details: always
-  ### Spring boot admin
   endpoints:
     web:
       exposure:
         include: "*"
-  ### Spring boot admin
