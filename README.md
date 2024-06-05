@@ -1,4 +1,4 @@
-# Clinic Management Microservices
+# Clinic Management System
 
 ## Overview
 This application offers a platform for managing hospital operations through various microservices. It includes functionalities for handling patient information and payments, providing a streamlined approach to hospital management.
