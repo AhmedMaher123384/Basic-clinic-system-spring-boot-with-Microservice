@@ -33,9 +33,13 @@ This application offers a platform for managing hospital operations through vari
 
 ## Setup
 1. Clone the repository.
-2. Set up Docker and run Docker Compose:
+2. Set up Maven:
+   ```bash
+   mvn clean install
+3. Set up Docker and run Docker Compose:
    ```bash
    docker-compose up -d
+   
 ## Usage
 Use the provided endpoints to manage patients and payments through a RESTful API.
 
