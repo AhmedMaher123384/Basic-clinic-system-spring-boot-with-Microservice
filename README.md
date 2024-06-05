@@ -1,11 +1,14 @@
 # Clinic Management System
 
 ## Overview
-This application offers a platform for managing hospital operations through various microservices. It includes functionalities for handling patient information and payments, providing a streamlined approach to hospital management.
+This application offers a platform for managing clinic operations through various microservices. 
+It includes functionalities for handling patient information and payments, providing a streamlined approach to hospital management.
 
 ## Technologies Used
 - **Spring Boot**: Framework for creating stand-alone, production-grade Spring-based applications.
 - **Spring Cloud OpenFeign**: For inter-service communication.
+- **Spring Cloud Netflix Eureka**: For service registration and discovery.
+- **Spring Cloud Gateway**: For API Gateway and routing.
 - **H2 Database**: In-memory database for development and testing.
 - **MapStruct**: For mapping between DTOs and entities.
 - **Lombok**: To reduce boilerplate code for model objects.
