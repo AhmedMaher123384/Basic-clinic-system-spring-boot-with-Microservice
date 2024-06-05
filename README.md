@@ -6,6 +6,7 @@ It includes functionalities for handling patient information and payments, provi
 
 ## Technologies Used
 - **Spring Boot**: Framework for creating stand-alone, production-grade Spring-based applications.
+- **Spring Cloud**: Provides tools for building and deploying cloud-native applications.
 - **Spring Cloud OpenFeign**: For inter-service communication.
 - **Spring Cloud Netflix Eureka**: For service registration and discovery.
 - **Spring Cloud Gateway**: For API Gateway and routing.
@@ -42,7 +43,7 @@ It includes functionalities for handling patient information and payments, provi
 3. Set up Docker and run Docker Compose:
    ```bash
    docker-compose up -d
-   
+
 ## Usage
 Use the provided endpoints to manage patients and payments through a RESTful API.
 
