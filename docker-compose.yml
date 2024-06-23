@@ -10,7 +10,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=cloud
     networks:
-      - my-network
+      - clinc-network
 
   api-gateway:
     build:
@@ -24,7 +24,7 @@ services:
     depends_on:
       - eureka-server
     networks:
-      - my-network
+      - clinc-network
 
   doctor-service:
     build:
@@ -38,7 +38,7 @@ services:
     depends_on:
       - eureka-server
     networks:
-      - my-network
+      - clinc-network
 
   patient-service:
     build:
@@ -52,7 +52,7 @@ services:
     depends_on:
       - eureka-server
     networks:
-      - my-network
+      - clinc-network
 
   payment-service:
     build:
@@ -66,8 +66,8 @@ services:
     depends_on:
       - eureka-server
     networks:
-      - my-network
+      - clinc-network
 
 networks:
-  my-network:
+  clinc-network:
     driver: bridge
